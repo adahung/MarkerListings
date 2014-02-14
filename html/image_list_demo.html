@@ -1,0 +1,83 @@
+<html>
+<head>
+	<style>
+		ol {
+			list-style: none;
+		}
+		.sprite {
+			background: url('sprite.png') no-repeat 44px 103px;
+		}
+		.star {
+			background-position: 0px 0px;
+			height: 14px;
+			width: 14px; 
+		}
+		.stars li {
+			position: relative;
+			padding-left: 16px;
+		}
+		.stars li:before {
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px 0px;
+			height: 14px;
+			width: 14px; 
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.stars.narrow {
+			width: 20px;
+		}
+		.stars-right li {
+			position: relative;
+			padding-right: 16px;
+			width: 200px;
+		}
+		.stars-right li:after {
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px 0px;
+			height: 14px;
+			width: 14px; 
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.stars-right.narrow li {
+			width: 20px;
+		}
+		.stars-right.block li div {
+			width: 20px;
+		}
+					
+	</style>
+</head>
+<body>
+	<ol class="stars">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="stars narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="stars-right">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="stars-right narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="stars-right block">
+		<li><div>Listing one</div></li>
+		<li><div>Listing two</div></li>
+		<li><div>Listing three</div></li>
+	</ol>
+</body>
+</html>

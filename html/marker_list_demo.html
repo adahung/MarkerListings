@@ -1,0 +1,238 @@
+<html>
+<head>
+	<style>
+		body {
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Sans Serif';
+		}
+		ol {
+			list-style: none;
+		}
+		li {
+			min-height: 30px;
+		}
+		.sprite {
+			background: url('sprite.png') no-repeat 44px 103px;
+		}
+		.marker {
+			background-position: -24px -17px;
+			height: 27px;
+			width: 16px; 
+		}
+		.big-marker {
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+		}
+		.markers li {
+			position: relative;
+			padding-left: 20px;
+		}
+		.markers li:before {
+			display: block;
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: -24px -17px;
+			height: 27px;
+			width: 16px; 
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.markers.narrow {
+			width: 20px;
+		}
+		.markers.numeral {
+			counter-reset: li;
+		}
+		.markers.numeral li:before {
+			display: block;
+			counter-increment: li;
+			content: counter(li);
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: -24px -17px;
+			height: 27px;
+			width: 16px; 
+			position: absolute;
+			left: 0;
+			top: 0;	
+			text-align: center;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 19px;
+		}
+		.markers-right li {
+			position: relative;
+			padding-right: 20px;
+			width: 200px;
+		}
+		.markers-right li:after {
+			display: block;
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: -24px -17px;
+			height: 27px;
+			width: 16px; 
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.markers-right.narrow li {
+			width: 20px;
+		}
+		.markers-right.block li div {
+			width: 20px;
+		}
+		.big-markers li {
+			position: relative;
+			padding-left: 25px;
+			min-height: 35px;
+		}
+		.big-markers li:before {
+			display: block;
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.big-markers.narrow {
+			width: 20px;
+		}
+		.big-markers.numeral {
+			counter-reset: li;
+		}
+		.big-markers.numeral li:before {
+			display: block;
+			counter-increment: li;
+			content: counter(li);
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+			position: absolute;
+			left: 0;
+			top: 0;	
+			text-align: center;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 23px;
+		}
+		.big-markers-right li {
+			position: relative;
+			padding-right: 20px;
+			width: 200px;
+		}
+		.big-markers-right li:after {
+			display: block;
+			content: '';
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.big-markers-right.narrow li {
+			width: 20px;
+		}
+		.big-markers-right.block li div {
+			width: 20px;
+		}
+		.big-markers-right.block.numeral {
+			counter-reset: li;
+		}
+		.big-markers-right.block.numeral li:after {
+			counter-increment: li;
+			content: counter(li);
+			display: block;
+			background: url('sprite.png') no-repeat 44px 103px;
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+			position: absolute;
+			right: 0;
+			top: 0;	
+			text-align: center;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 23px;
+		}
+					
+	</style>
+</head>
+<body>
+	<ol class="markers">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="markers narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="markers numeral">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="markers-right">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="markers-right narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="markers-right block">
+		<li><div>Listing one</div></li>
+		<li><div>Listing two</div></li>
+		<li><div>Listing three</div></li>
+	</ol>
+	<!-- big marker -->
+	<ol class="big-markers">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="big-markers narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="big-markers numeral">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="big-markers-right">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="big-markers-right narrow">
+		<li>Listing one</li>
+		<li>Listing two</li>
+		<li>Listing three</li>
+	</ol>
+	<ol class="big-markers-right block">
+		<li><div>Listing one</div></li>
+		<li><div>Listing two</div></li>
+		<li><div>Listing three</div></li>
+	</ol>
+	<ol class="big-markers-right block numeral">
+		<li><div>Listing one</div></li>
+		<li><div>Listing two</div></li>
+		<li><div>Listing three</div></li>
+	</ol>
+</body>
+</html>

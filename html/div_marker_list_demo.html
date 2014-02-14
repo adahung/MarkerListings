@@ -1,0 +1,109 @@
+<html>
+<head>
+	<style>
+		body {
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'Sans Serif';
+		}
+		ol {
+			list-style: none;
+		}
+		li {
+			min-height: 35px;
+			position: relative;
+		}
+		.sprite {
+			background: url('sprite.png') no-repeat 44px 103px;
+		}
+		.marker {
+			display: block;
+			background-position: -24px -17px;
+			height: 27px;
+			width: 16px; 
+			position: absolute;
+		}
+		.big-marker {
+			display: block;
+			background-position: 0px -15px;
+			height: 30px;
+			width: 21px;
+			position: absolute;
+		}
+		.numeral {
+			text-align: center;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 19px;
+		}
+		.big-numeral {
+			text-align: center;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 23px;
+		}
+		.markers li {
+			position: relative;
+			padding-left: 20px;
+		}
+		.markers .marker {
+			top: 0px;
+			left: 0px;
+		}	
+		.markers-right {
+			width: 300px;
+		}	
+		.markers-right li {
+			position: relative;
+			padding-right: 20px;
+		}
+		.markers-right .marker {
+			top: 0px;
+			right: 0px;
+		}
+		.big-markers li {
+			position: relative;
+			padding-left: 25px;
+		}
+		.big-markers .big-marker {
+			top: 0px;
+			left: 0px;
+		}	
+		.big-markers-right {
+			width: 300px;
+		}	
+		.big-markers-right li {
+			position: relative;
+			padding-right: 25px;
+		}
+		.big-markers-right .big-marker {
+			top: 0px;
+			right: 0px;
+		}
+
+					
+	</style>
+</head>
+<body>
+	<ol class="markers">
+		<li><div class="marker sprite numeral">1</div><div>Listing one</div></li>
+		<li><div class="marker sprite numeral">2</div><div>Listing two</div></li>
+		<li><div class="marker sprite numeral">3</div><div>Listing three</div></li>
+	</ol>
+	<ol class="markers-right">
+		<li><div class="marker sprite numeral">1</div><div>Listing one</div></li>
+		<li><div class="marker sprite numeral">2</div><div>Listing two</div></li>
+		<li><div class="marker sprite numeral">3</div><div>Listing three</div></li>
+	</ol>
+		<ol class="big-markers">
+		<li><div class="big-marker sprite big-numeral">1</div><div>Listing one</div></li>
+		<li><div class="big-marker sprite big-numeral">2</div><div>Listing two</div></li>
+		<li><div class="big-marker sprite big-numeral">3</div><div>Listing three</div></li>
+	</ol>
+	<ol class="big-markers-right">
+		<li><div class="big-marker sprite big-numeral">1</div><div>Listing one</div></li>
+		<li><div class="big-marker sprite big-numeral">2</div><div>Listing two</div></li>
+		<li><div class="big-marker sprite big-numeral">3</div><div>Listing three</div></li>
+	</ol>
+</body>
+</html>
